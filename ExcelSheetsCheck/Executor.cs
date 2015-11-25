@@ -152,8 +152,8 @@ namespace ExcelSheetsCheck
 
         private static string[] GetCheckingDocumentData(Excel.Worksheet worksheet)
         {
-            int rowIndexKPP = 29;
-            int columnIndexKPP = 1;
+            int rowIndexKPP = 7;//29;
+            int columnIndexKPP = 6;//1;
 
             int rowIndexOKTMO = 27;
             int columnIndexOKTMO = 5;
@@ -178,6 +178,7 @@ namespace ExcelSheetsCheck
             }
 
             checkingDocumentData[0] = sb.ToString();
+            //System.IO.File.WriteAllText(@"C:\\out.txt", sb.ToString());
             checkingDocumentData[1] = strWithOKTMO.Trim();
 
             return checkingDocumentData;
